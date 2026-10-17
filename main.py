@@ -1,5 +1,8 @@
+import os
+from src.generate_files import generate_files
+
 def main():
-    print("Hello from static-site-generator!")
+    generate_files("static", "public")
 
 
 if __name__ == "__main__":
