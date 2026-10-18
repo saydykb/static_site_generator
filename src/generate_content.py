@@ -10,7 +10,7 @@ def generate_content(from_path: str, template_path: str, dest_path: str):
 
     with open(template_path) as file:
         template = file.read()
-
+    
     node = markdown_to_nodes(markdown)
     content = node.to_html()
 
@@ -18,7 +18,7 @@ def generate_content(from_path: str, template_path: str, dest_path: str):
 
     template = template.replace("{{ Title }}", title)
     template = template.replace("{{ Content }}", content)
-
+    
     if not os.path.exists(os.path.dirname(dest_path)):
         os.makedirs(os.path.dirname(dest_path))
 

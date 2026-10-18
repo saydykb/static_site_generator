@@ -9,10 +9,9 @@ def blocknodes_to_finalnodes(blocknodes: list[ParentNode | LeafNode]) -> list[Pa
     finalnodes = []
 
     for node in blocknodes:
-
         if isinstance(node, ParentNode):
             new_children = blocknodes_to_finalnodes(node.children)
-            node_node = ParentNode(node.tag, new_children)
+            new_node = ParentNode(node.tag, new_children)
             finalnodes.append(new_node)
 
         else:
@@ -27,6 +26,6 @@ def blocknodes_to_finalnodes(blocknodes: list[ParentNode | LeafNode]) -> list[Pa
                 leafnodes: list[LeafNode] = textnodes_to_leafnodes(textnodes)
                 new_node = ParentNode(node.tag, leafnodes)
             
-            finalnodes.append(node)
+            finalnodes.append(new_node)
 
     return finalnodes
