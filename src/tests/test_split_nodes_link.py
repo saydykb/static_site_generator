@@ -1,6 +1,6 @@
 import unittest
-from textnode import TextNode, TextType
-from split_nodes_link import extract_markdown_links, split_nodes_link
+from src.textnode import TextNode, TextType
+from src.split_nodes_link import extract_markdown_links, split_nodes_link
 
 class TestExtractMarkdownLinks(unittest.TestCase):
     def setUp(self):

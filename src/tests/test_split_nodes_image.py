@@ -1,6 +1,6 @@
 import unittest
-from textnode import TextNode, TextType
-from split_nodes_image import extract_markdown_images, split_nodes_image
+from src.textnode import TextNode, TextType
+from src.split_nodes_image import extract_markdown_images, split_nodes_image
 
 class TestExtractMarkdown(unittest.TestCase):
     def setUp(self):

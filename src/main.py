@@ -1,7 +1,11 @@
-from textnode import TextNode, TextType
+import os
+from src.generate_files import generate_files
+from src.generate_content import generate_content
 
 def main():
-    textnode = TextNode("this is text", TextType("bold"), "website.com")
-    print(textnode)
+    generate_files("static", "public")
+    generate_content("content/index.md", "template.html", "public/index.html")
 
-main()
+
+if __name__ == "__main__":
+    main()

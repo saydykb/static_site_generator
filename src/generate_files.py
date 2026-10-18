@@ -1,9 +1,7 @@
 import os, shutil
 
 def generate_files(source: str, destination: str):
-#    print(f"attempting to generate files from source: {source} and destination: {destination}")
-    if not os.path.exists(source):
-        raise FileNotFoundError("source does not exsts")
+#    print(f"attempting to generate files from source: {source} and destination: {destination}") if not os.path.exists(source): raise FileNotFoundError("source does not exsts")
     if os.path.isfile(destination):
         raise ValueError("destination must be a dir")
     if os.path.isdir(source):

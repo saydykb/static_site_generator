@@ -1,4 +1,3 @@
-
 class HTMLNode:
     def __init__(self,
                  tag: str | None = None,
@@ -11,7 +10,7 @@ class HTMLNode:
         self.children = children
         self.props = props
 
-    def to_html(self):
+    def to_html(self)-> str:
         raise NotImplementedError
     
     def props_to_html(self):

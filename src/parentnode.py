@@ -1,13 +1,19 @@
-from htmlnode import HTMLNode
+from src.htmlnode import HTMLNode
 
 class ParentNode(HTMLNode):
-    def __init__(self, 
-                 tag: str | None,
-                 children: list[HTMLNode],
-                 props: dict[str, str] | None = None):
+    tag: str | None
+    children: list[HTMLNode]
+    props: dict[str, str] | None
+
+    def __init__(
+            self,
+            tag,
+            children,
+            props = None
+            ):
         super().__init__(tag, None, children, props)
 
-    def to_html(self):
+    def to_html(self) -> str:
         if self.tag is None:
             raise ValueError("tag must have a value")
         if not self.children:

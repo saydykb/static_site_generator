@@ -1,14 +1,17 @@
-from htmlnode import HTMLNode
+from src.htmlnode import HTMLNode
 
 class LeafNode(HTMLNode):
+    tag: str | None
+    value: str
+    props: dict[str, str] | None
     def __init__(self, 
-                 tag: str | None,
-                 value: str,
-                 props: dict[str, str] | None = None,
+                 tag,
+                 value,
+                 props = None,
                  ) -> None:
         super().__init__(tag, value, None, props)
 
-    def to_html(self):
+    def to_html(self)-> str:
         if self.value is None:
             raise ValueError("the leaf node has no value")
         if self.tag is None:
