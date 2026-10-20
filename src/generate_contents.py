@@ -1,6 +1,6 @@
 import os
 
-from src.generate_content import generate_content
+from generate_content import generate_content
 
 def generate_contents(source_dir_path: str, template_path: str, dest_dir_path: str):
 

@@ -1,8 +1,8 @@
 import re
-from src.htmlnode import HTMLNode
-from src.parentnode import ParentNode
-from src.leafnode import LeafNode
-from src.block_to_block_type import block_to_block_type, BlockType
+from htmlnode import HTMLNode
+from parentnode import ParentNode
+from leafnode import LeafNode
+from block_to_block_type import block_to_block_type, BlockType
 
 def blocks_to_blocknodes(blocks: list[str]) -> list[ParentNode | LeafNode]:
     blocknodes = []

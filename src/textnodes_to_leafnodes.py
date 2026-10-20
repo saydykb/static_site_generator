@@ -1,5 +1,5 @@
-from src.textnode import TextNode, TextType
-from src.leafnode import LeafNode
+from textnode import TextNode, TextType
+from leafnode import LeafNode
 
 
 def textnodes_to_leafnodes(textnodes: list[TextNode]) -> list[LeafNode]:

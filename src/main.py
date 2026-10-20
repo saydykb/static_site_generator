@@ -1,10 +1,13 @@
 import os
-from src.generate_files import generate_files
-from src.generate_contents import generate_contents
+import sys
+
+from generate_files import generate_files
+from generate_contents import generate_contents
+
 
 def main():
-    generate_files("static", "public")
-    generate_contents("content", "template.html", "public")
+    generate_files("static", "docs")
+    generate_contents("content", "template.html", "docs")
 
 if __name__ == "__main__":
     main()

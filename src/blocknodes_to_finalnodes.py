@@ -1,9 +1,9 @@
-from src.htmlnode import HTMLNode
-from src.parentnode import ParentNode
-from src.leafnode import LeafNode
-from src.textnode import TextNode
-from src.text_to_textnodes import text_to_textnodes
-from src.textnodes_to_leafnodes import textnodes_to_leafnodes
+from htmlnode import HTMLNode
+from parentnode import ParentNode
+from leafnode import LeafNode
+from textnode import TextNode
+from text_to_textnodes import text_to_textnodes
+from textnodes_to_leafnodes import textnodes_to_leafnodes
 
 def blocknodes_to_finalnodes(blocknodes: list[ParentNode | LeafNode]) -> list[ParentNode | LeafNode]:
     finalnodes = []
